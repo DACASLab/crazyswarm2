@@ -1,12 +1,11 @@
 /motion_capture_tracking:
   ros__parameters:
     # one of "optitrack", "optitrack_closed_source", "vicon", "qualisys", "nokov", "vrpn", "motionanalysis"
-    type: "optitrack"
+    type: "qualisys"
     # Specify the hostname or IP of the computer running the motion capture software
-    hostname: "141.23.110.143"
+    hostname: "10.176.60.155"
 
     topics:
-      frame_id: "mocap"
       poses:
         qos:
           mode: "sensor"
@@ -50,7 +49,7 @@
 
     dynamics_configurations:
       default:
-        max_velocity: [2, 2, 3] # m/s
+        max_velocity: [6, 6, 6] # m/s
         max_angular_velocity: [20, 20, 10] # rad/s
         max_roll: 1.4 #rad
         max_pitch: 1.4 #rad
